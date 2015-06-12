@@ -57,6 +57,11 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+  # deploy
+  gem 'mina'
+end
+
 group :test do
   # Specs
   gem 'rspec-rails'
@@ -72,7 +77,4 @@ end
 group :production do
   # The twelve-factor app
   gem 'rails_12factor'
-
-  # Webserver
-  gem 'puma'
 end
