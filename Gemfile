@@ -43,10 +43,10 @@ gem 'route_translator'
 # Collenction of locale settings
 gem 'rails-i18n', '~> 4.0.0'
 
-group :development, :test do
-  # Environment variables
-  gem 'dotenv-rails'
+# Environment variables
+gem 'dotenv-rails'
 
+group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
