@@ -22,7 +22,7 @@ html lang="#{I18n.locale}"
 
     = render 'shared/navbar'
 
-    div[class="image-header #{current_page?(:root) ? '' : 'small'}"]
+    div.image-header
       = yield :header
 
     .row
