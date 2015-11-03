@@ -10,6 +10,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+gem 'mysql2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -78,5 +79,4 @@ end
 group :production do
   # The twelve-factor app
   gem 'rails_12factor'
-  gem 'mysql2'
 end
