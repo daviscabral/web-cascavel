@@ -4,8 +4,6 @@ ruby '2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
-# Use postgresql as the database for Active Record
-gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -58,6 +56,11 @@ group :development, :test do
 
   # Setup easier than pg for development
   gem 'sqlite3'
+
+  # Deployment
+  gem 'vlad', require: false
+  gem 'vlad-git', require: false
+  gem 'vlad-extras', require: false
 end
 
 group :test do
@@ -75,10 +78,5 @@ end
 group :production do
   # The twelve-factor app
   gem 'rails_12factor'
-
-  # Errors and exceptions
-  gem 'rollbar'
-
-  # Webserver
-  gem 'puma'
+  gem 'mysql2'
 end
