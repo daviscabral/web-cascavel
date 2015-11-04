@@ -11,7 +11,8 @@
   .summary
     = event.summary
 
-  - if more_info.present?
-    .text-center
+
+  .text-center
+    - if more_info.present?
       = event.details_link
 /! events/banner
