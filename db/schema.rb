@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150218190831) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.string   "slug"
@@ -28,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150218190831) do
     t.text     "summary"
   end
 
-  add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
+  add_index "events", ["slug"], name: "index_events_on_slug", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "provider"
@@ -42,6 +39,6 @@ ActiveRecord::Schema.define(version: 20150218190831) do
     t.boolean  "admin",      default: false
   end
 
-  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid", using: :btree
+  add_index "users", ["provider", "uid"], name: "index_users_on_provider_and_uid"
 
 end
